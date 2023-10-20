@@ -1,31 +1,26 @@
-/*
-This example code counts the frequency of each number in the vector.
- */
-use std::collections::HashMap;
+use clap::Parser;
+use hashmap_count::logic;
+use std::env;
 
-fn logic(numbers: Vec<i32>) -> Vec<(i32, u32)> {
-    let mut frequencies = HashMap::new();
-
-    for num in numbers {
-        let frequency = frequencies.entry(num).or_insert(0);
-        *frequency += 1;
-    }
-
-    let mut result = Vec::new();
-
-    for (num, frequency) in frequencies {
-        result.push((num, frequency));
-    }
-
-    result
+#[derive(Parser)]
+#[clap(
+    version = "1.0",
+    author = "Your Name <your.email@example.com>",
+    about = "Number of fruits to include in the salad"
+)]
+struct Opts {
+    #[clap(short, long)]
+    number: usize,
 }
 
+
 fn main() {
-    let numbers = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 3];
+    let input = env::args().skip(1).next().unwrap_or_default();
+    let numbers: Vec<i32> = input
+    .split(',')
+    .map(|s| s.trim())
+    .map(|s| s.parse().unwrap())
+    .collect();
     let result = logic(numbers);
-    //print the results in a human readable format that explains what the result is.
-    println!(
-        "The frequency of each number in the vector is: {:?}",
-        result
-    );
+    println!("Result: {:?}", result);
 }

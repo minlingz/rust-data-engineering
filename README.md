@@ -5,6 +5,9 @@
 To install `hashmap-count`, you need to have Rust and Cargo installed on your system. You can install Rust and Cargo by following the instructions on the official Rust website.
 
 Once Rust and Cargo are installed, you can install `hashmap-count` by running the following command:
+```
+cargo install hashmap-count
+```
 
 This will download the source code, compile it, and install the binary on your system.
 

@@ -2,7 +2,7 @@
 `hashmap-count` is a command-line tool that counts the number of occurrences of each integer in a comma-separated list of integers. It then returns a list of the top n integers with the highest counts, where n is a user-specified parameter.
 
 # Installation
-To install `hashmap-count`, you need to have Rust and Cargo installed on your system. You can install Rust and Cargo by following the instructions on the official Rust website.
+To install `hashmap-count`, you need to have Rust and Cargo installed on your system. You can install Rust and Cargo by following the instructions on the [official Rust website](https://www.rust-lang.org/tools/install).
 
 Once Rust and Cargo are installed, you can install `hashmap-count` by running the following command:
 ```

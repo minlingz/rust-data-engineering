@@ -30,4 +30,4 @@ This indicates that the integers 1 and 2 each occurred twice in the input list a
 
 
 # Conclusion
-`hashmap-count` is a simple and useful tool for counting the occurrences of integers in a list and returning the top n integers. It is easy to install and use, and can be a valuable addition to any developer's toolkit.
+`hashmap-count` is a simple and useful tool for counting the occurrences of integers in a list. It is easy to install and use, and can be a valuable addition to any developer's toolkit.
